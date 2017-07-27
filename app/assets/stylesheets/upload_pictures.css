@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family:Helvetica,Arial,sans-serif;
+  -webkit-text-size-adjust:none;
+  background: #FFF;
+  font-size:small;
+  font-weight: normal;
+  text-rendering:optimizelegibility; 
+}
+
+.container {
+  margin:0px auto;
+  width:980px;
+}
+
+.upload-pic {
+  margin:10px;
+  padding:5px 10px 10px;
+  width:937px;
+  border: 1px solid #DDD;
+  -moz-box-shadow:0px 2px 5px #CDCDCD;
+  -webkit-box-shadow:0px 2px 5px #CDCDCD;
+  box-shadow:0px 2px 5px #CDCDCD;
+  position:relative;
+}
+
+.upload-pic .message-span, .upload-pic .error_message {
+  margin: 150px auto;
+  width:420px;
+  height:100px;
+  background: rgba(138,138,138,0.9) !important;
+  background:#8a8a8a;
+  border: 1px solid #ccc;
+  -moz-box-shadow:0 0 7px #999;
+  -webkit-box-shadow:0 0 7px #999;
+  box-shadow:0 0 7px #999;
+}
+  
+.upload-pic .error_message {
+  color:#FFF;
+  line-height:100px;
+  text-align:center;
+  font-size: 140%;
+  text-transform: uppercase;
+}
+
+.upload-pic .message-span span {
+  color:#FFF;
+  padding:32px 10px;
+  height:36px;
+  line-height:20px;
+  text-align:center;
+  display:block;
+  position:relative;
+  font-size: 140%;
+}
+
+.upload-pic .upload-title {
+  font-size:140%;
+  font-weight:bold;
+  margin:0 0 5px;
+  padding:0px 8px;
+  text-transform:uppercase;
+  height:25px;
+  line-height:30px;
+  color: #3c3c3c;
+  position: relative;
+}
+
+.upload-pic .upload-title span {
+  background:url(/assets/gradient-white.png) repeat-x;
+  position: absolute;
+  width: 300px;
+  height: 25px;
+  *position: relative
+}
+
+.upload-pic img {
+  width:937px;
+  height:auto;
+}
+
+.min-height {
+  min-height: 400px; 
+}
+
+.loading {
+    border:0px;
+    width:100%;
+    height:100%;
+    background: url(/assets/loading.gif) no-repeat center center;
+}
+
+.upload-files {
+  margin:10px;
+  padding:10px 13px 10px 10px;
+  width:934px;
+  background:#FFF;
+  border: 1px solid #DDD;
+  -moz-box-shadow:0px 2px 5px #CDCDCD;
+  -webkit-box-shadow:0px 2px 5px #CDCDCD;
+  box-shadow:0px 2px 5px #CDCDCD;
+  color:#666;
+  float:left;
+}
+
+.upload-files input[type="file"] {
+  margin:10px;
+  font-size:90%;
+}
+
+.upload-files .crop-action {
+  height: 40px;
+  line-height: 40px;
+}
+
+.upload-files .crop-action img {
+  vertical-align: text-top;
+  width: 16px;
+  height: 16px;
+}
+
+.hidden {
+  display:none;
+}
