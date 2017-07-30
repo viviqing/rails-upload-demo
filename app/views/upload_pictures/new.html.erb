@@ -1,31 +1,29 @@
 <script>
-  var transfer_canceled_message = "The transfer has been canceled by the user.";
-  var no_right_image_message = "No fit picture, please upload picture.";
-  var no_image_message = "No picture, please upload picture.";
-  var save_success_message = "Pictures uploading succeed.";
-  var save_false_message = "Failed to save picture.";
-  var need_crop_image_message = "Some pictures need to be cropped. Please click save when you finished crop each of them everytime.";
-  var please_crop_picture_message = "Please crop this picture - Click the mouse and drag a box around the section you wish to crop, and then click save.";
-  var error_message = "Upload error, unable to preview";
+  $( function() {
+    $( "#upload_picture_scheduled_date" ).datepicker({
+    	dateFormat: "yy-mm-dd"
+    });
+  } );
 </script>
 <%= form_for(@upload_picture,:html => { :multipart => true }) do |f| %>
-  <% @upload_picture.errors.full_messages.each do |msg| %>
-      <p><%= msg %></p>
-   <% end %>
-  <div id="upload_picture" class="container">
-    <div id="preview_box" class="upload-pic min-height">
+	<% message = 'Picture should be in jpg / png / gif format' %>
+	<% error_message = '' %>
+  <% @upload_picture.errors.full_messages.each do |msg|
+  	error_message += "#{msg}<br />"
+  end %>
+  <div class="container">
+    <div class="upload-pic min-height">
       <div class="upload-title"><span></span>Picture Preview</div>
-      <div class="message-span"><span>Picture should be bigger than 940 x 400 pixels in jpg / png / gif format</span></div>
-      <div id="preview_image"></div>
+      <div class="message-span"><span><%=raw error_message.blank? ? message : error_message %></span></div>
     </div>
-	<div class="upload-files">
-		<div class="crop-action crop_bar hidden">
-			Notice: This picture's aspect ratio doesn't suit our standard, please crop it at above.
-			<input type="button" name="" id="save_cropped_picture" value="Save" />
-		</div>
-		<hr class="crop_bar hidden" />
-		Picture File&nbsp;&nbsp;<%= f.file_field :image, :size => 35 %> <input type="button" name="upload_picture_upload" id="upload_picture_upload" value="Upload" />
-		<input type="button" value="Cancel" onclick="history.go(-1);return false;" />
+		<div class="upload-files">
+			File&nbsp;&nbsp;<%= f.file_field :image, :size => 35 %>
+			<br />
+			Date: <%= f.text_field :scheduled_date, :readonly => 'readonly' %>&nbsp;&nbsp;
+			Description: <%= f.text_field :description %>
+			<br />
+			<%= f.submit 'Upload' %> |
+			<%= link_to 'Back', upload_pictures_path %>
     </div>
   </div>
 <% end %>

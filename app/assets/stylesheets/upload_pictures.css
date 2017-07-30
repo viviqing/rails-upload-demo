@@ -80,18 +80,11 @@ body {
 
 .upload-pic img {
   width:937px;
-  height:auto;
+  height:400px;
 }
 
 .min-height {
   min-height: 400px; 
-}
-
-.loading {
-    border:0px;
-    width:100%;
-    height:100%;
-    background: url(/assets/loading.gif) no-repeat center center;
 }
 
 .upload-files {
@@ -110,17 +103,6 @@ body {
 .upload-files input[type="file"] {
   margin:10px;
   font-size:90%;
-}
-
-.upload-files .crop-action {
-  height: 40px;
-  line-height: 40px;
-}
-
-.upload-files .crop-action img {
-  vertical-align: text-top;
-  width: 16px;
-  height: 16px;
 }
 
 .hidden {

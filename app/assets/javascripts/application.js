@@ -10,7 +10,7 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery-1.4.2.min
-//= require ajaxfileupload
+//= require jquery
 //= require turbolinks
+//= require jquery-ui.min
 //= require_tree .

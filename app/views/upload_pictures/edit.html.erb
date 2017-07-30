@@ -1,6 +1,22 @@
-<h1>Editing Upload Picture</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @upload_picture %> |
-<%= link_to 'Back', upload_pictures_path %>
+<script>
+  $( function() {
+    $( "#upload_picture_scheduled_date" ).datepicker({
+    	dateFormat: "yy-mm-dd"
+    });
+  } );
+</script>
+<div class="container">
+  <div class="upload-pic min-height">
+    <div class="upload-title"><span></span>Picture Preview</div>
+    <div><img src='<%= "/system/images/#{@upload_picture.image_file_name}"%>' /></div>
+  </div>
+	<div class="upload-files">
+		<%= form_for(@upload_picture) do |f| %>
+			Date: <%= f.text_field :scheduled_date, :readonly => 'readonly' %>&nbsp;&nbsp;
+			Description: <%= f.text_field :description %>
+			<br />
+			<%= f.submit 'Save' %>  |
+			<%= link_to 'Back', upload_pictures_path %>
+		<% end %>
+  </div>
+</div>

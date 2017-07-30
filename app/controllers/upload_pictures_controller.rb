@@ -60,11 +60,6 @@ class UploadPicturesController < ApplicationController
       format.json { head :no_content }
     end
   end
-  
-  def check_picture
-    result = UploadPicture.check_picture(params[:upload_picture][:image])
-    render :text => result.to_json
-  end
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -74,6 +69,6 @@ class UploadPicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def upload_picture_params
-      params.fetch(:upload_picture, {})
+      params.require(:upload_picture).permit(:image, :scheduled_date, :description, :image_file_name, :image_content_type, :image_file_size)
     end
 end

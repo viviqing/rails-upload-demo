@@ -1,4 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_upload_picture_path(@upload_picture) %> |
-<%= link_to 'Back', upload_pictures_path %>
+<div class="container">
+  <div class="upload-pic min-height">
+    <div class="upload-title"><span></span>Picture Preview</div>
+    <div><img src='<%= "/system/images/#{@upload_picture.image_file_name}"%>' /></div>
+  </div>
+	<div class="upload-files">
+		<%= "Date: #{@upload_picture.scheduled_date}" unless @upload_picture.scheduled_date.blank? %>&nbsp;&nbsp;
+		<%= "Description: #{@upload_picture.description}" unless @upload_picture.description.blank? %>
+		<br />
+		<%= link_to 'Edit', edit_upload_picture_path(@upload_picture) %> |
+		<%= link_to 'Back', upload_pictures_path %>
+  </div>
+</div>
