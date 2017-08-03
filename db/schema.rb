@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20170724100332) do
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size",    limit: 4
     t.string   "description",        limit: 255
-    t.date     "scheduled_date"
+    t.date     "start_date"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
   end

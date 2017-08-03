@@ -5,7 +5,7 @@ class CreateUploadPictures < ActiveRecord::Migration
       t.string :image_content_type
       t.integer :image_file_size
       t.string :description
-      t.date :scheduled_date
+      t.date :start_date
       t.timestamps null: false
     end
   end

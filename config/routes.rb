@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   resources :upload_pictures
-  post 'check_picture' => 'upload_pictures#check_picture'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

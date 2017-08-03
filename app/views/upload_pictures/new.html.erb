@@ -1,6 +1,6 @@
 <script>
   $( function() {
-    $( "#upload_picture_scheduled_date" ).datepicker({
+    $( "#upload_picture_start_date" ).datepicker({
     	dateFormat: "yy-mm-dd"
     });
   } );
@@ -19,11 +19,12 @@
 		<div class="upload-files">
 			File&nbsp;&nbsp;<%= f.file_field :image, :size => 35 %>
 			<br />
-			Date: <%= f.text_field :scheduled_date, :readonly => 'readonly' %>&nbsp;&nbsp;
+			Start Date: <%= f.text_field :start_date, :readonly => 'readonly' %>&nbsp;&nbsp;
 			Description: <%= f.text_field :description %>
-			<br />
-			<%= f.submit 'Upload' %> |
-			<%= link_to 'Back', upload_pictures_path %>
+			<span style='float: right;'>
+			  <%= f.submit 'Upload' %> |
+			  <%= link_to 'Back', upload_pictures_path %>
+			<span>
     </div>
   </div>
 <% end %>

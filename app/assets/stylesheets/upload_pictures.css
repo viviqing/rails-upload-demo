@@ -3,84 +3,92 @@
 body {
   margin: 0px;
   padding: 0px;
-  font-family:Helvetica,Arial,sans-serif;
-  -webkit-text-size-adjust:none;
+  font-family: Helvetica,Arial,sans-serif;
+  -webkit-text-size-adjust: none;
   background: #FFF;
-  font-size:small;
+  font-size: small;
   font-weight: normal;
-  text-rendering:optimizelegibility; 
+  text-rendering: optimizelegibility; 
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid black;
+  padding: 15px;
 }
 
 .container {
-  margin:0px auto;
-  width:980px;
+  margin: 0px auto;
+  width: 980px;
 }
 
 .upload-pic {
-  margin:10px;
-  padding:5px 10px 10px;
-  width:937px;
+  margin: 10px;
+  padding: 5px 10px 10px;
+  width: 937px;
   border: 1px solid #DDD;
-  -moz-box-shadow:0px 2px 5px #CDCDCD;
-  -webkit-box-shadow:0px 2px 5px #CDCDCD;
-  box-shadow:0px 2px 5px #CDCDCD;
-  position:relative;
+  -moz-box-shadow: 0px 2px 5px #CDCDCD;
+  -webkit-box-shadow: 0px 2px 5px #CDCDCD;
+  box-shadow: 0px 2px 5px #CDCDCD;
+  position: relative;
 }
 
 .upload-pic .message-span, .upload-pic .error_message {
   margin: 150px auto;
-  width:420px;
-  height:100px;
+  width: 420px;
+  height: 100px;
   background: rgba(138,138,138,0.9) !important;
-  background:#8a8a8a;
+  background: #8a8a8a;
   border: 1px solid #ccc;
-  -moz-box-shadow:0 0 7px #999;
-  -webkit-box-shadow:0 0 7px #999;
-  box-shadow:0 0 7px #999;
+  -moz-box-shadow: 0 0 7px #999;
+  -webkit-box-shadow: 0 0 7px #999;
+  box-shadow: 0 0 7px #999;
 }
   
 .upload-pic .error_message {
-  color:#FFF;
-  line-height:100px;
-  text-align:center;
+  color: #FFF;
+  line-height: 100px;
+  text-align: center;
   font-size: 140%;
   text-transform: uppercase;
 }
 
 .upload-pic .message-span span {
-  color:#FFF;
-  padding:32px 10px;
-  height:36px;
-  line-height:20px;
-  text-align:center;
-  display:block;
-  position:relative;
+  color: #FFF;
+  padding: 32px 10px;
+  height: 36px;
+  line-height: 20px;
+  text-align: center;
+  display: block;
+  position: relative;
   font-size: 140%;
 }
 
 .upload-pic .upload-title {
-  font-size:140%;
-  font-weight:bold;
-  margin:0 0 5px;
-  padding:0px 8px;
-  text-transform:uppercase;
-  height:25px;
-  line-height:30px;
+  font-size: 140%;
+  font-weight: bold;
+  margin: 0 0 5px;
+  padding: 0px 8px;
+  text-transform: uppercase;
+  height: 25px;
+  line-height: 30px;
   color: #3c3c3c;
   position: relative;
 }
 
 .upload-pic .upload-title span {
-  background:url(/assets/gradient-white.png) repeat-x;
+  background: url(/assets/gradient-white.png) repeat-x;
   position: absolute;
   width: 300px;
   height: 25px;
-  *position: relative
 }
 
 .upload-pic img {
-  width:937px;
-  height:400px;
+  max-width: 937px;
+  max-height: 400px;
 }
 
 .min-height {
@@ -88,23 +96,40 @@ body {
 }
 
 .upload-files {
-  margin:10px;
-  padding:10px 13px 10px 10px;
-  width:934px;
-  background:#FFF;
+  margin: 10px;
+  padding: 10px 13px 10px 10px;
+  width: 934px;
+  background: #FFF;
   border: 1px solid #DDD;
-  -moz-box-shadow:0px 2px 5px #CDCDCD;
-  -webkit-box-shadow:0px 2px 5px #CDCDCD;
-  box-shadow:0px 2px 5px #CDCDCD;
-  color:#666;
-  float:left;
+  -moz-box-shadow: 0px 2px 5px #CDCDCD;
+  -webkit-box-shadow: 0px 2px 5px #CDCDCD;
+  box-shadow: 0px 2px 5px #CDCDCD;
+  color: #666;
+  float: left;
 }
 
 .upload-files input[type="file"] {
-  margin:10px;
-  font-size:90%;
+  margin: 10px;
+  font-size: 90%;
 }
 
 .hidden {
-  display:none;
+  display: none;
+}
+
+.list-pic {
+  margin: 10px;
+  padding: 5px 10px 10px;
+  width: 469px;
+  height: 200px;
+  border: 1px solid #DDD;
+  -moz-box-shadow: 0px 2px 5px #CDCDCD;
+  -webkit-box-shadow: 0px 2px 5px #CDCDCD;
+  box-shadow: 0px 2px 5px #CDCDCD;
+  position: relative;
+}
+
+.list-pic img {
+  max-width: 469px;
+  max-height: 200px;
 }

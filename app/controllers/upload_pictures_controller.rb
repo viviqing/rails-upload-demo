@@ -4,7 +4,7 @@ class UploadPicturesController < ApplicationController
   # GET /upload_pictures
   # GET /upload_pictures.json
   def index
-    @upload_pictures = UploadPicture.all
+    @upload_pictures = UploadPicture.order('start_date desc')
   end
 
   # GET /upload_pictures/1
@@ -69,6 +69,6 @@ class UploadPicturesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def upload_picture_params
-      params.require(:upload_picture).permit(:image, :scheduled_date, :description, :image_file_name, :image_content_type, :image_file_size)
+      params.require(:upload_picture).permit(:image, :start_date, :description, :image_file_name, :image_content_type, :image_file_size)
     end
 end
