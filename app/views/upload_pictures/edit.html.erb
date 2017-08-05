@@ -7,7 +7,7 @@
 </script>
 <div class="container">
   <div class="upload-pic min-height">
-    <div class="upload-title"><span></span>Picture Preview</div>
+    <div class="upload-title">Picture Preview</div>
     <div style="text-align: center;"><img src='<%= "/system/images/#{@upload_picture.image_file_name}"%>' /></div>
   </div>
 	<div class="upload-files">
@@ -16,7 +16,7 @@
 			Description: <%= f.text_field :description %>
 			<span style='float: right;'>
 			  <%= f.submit 'Save' %>  |
-			  <%= link_to 'Back', upload_pictures_path %>
+			  <%= link_to 'Back', root_url %>
 			</span>
 		<% end %>
   </div>

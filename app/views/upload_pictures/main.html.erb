@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="upload-pic min-height">
+		<div class="upload-title">Today's Picture</div>
+    <div class="upload-message">
+      <% unless @picture.blank? %><span style="font-size:90%;"><%= @picture.description %></span><% end %>
+      <span style="float:right;width:120px;text-align:right;"><a href="<%= new_upload_picture_path %>">Submit Your Picture</a></span>
+		</div>
+    <div style="text-align: center;"><% unless @picture.blank? %><img src='<%= "/system/images/#{@picture.image_file_name}"%>' /><% end %></div>
+  </div>
+	<div class="upload-files">
+		<span style='float: center;'>
+		  <%= link_to 'Manage Pictures', upload_pictures_path %>
+		</span>
+  </div>
+</div>

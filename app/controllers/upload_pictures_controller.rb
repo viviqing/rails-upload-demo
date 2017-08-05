@@ -60,6 +60,10 @@ class UploadPicturesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def main
+    @picture = UploadPicture.where([UploadPicture.arel_table[:start_date].not_eq(nil), UploadPicture.arel_table[:start_date].lt(Date.today)].reduce(&:and)).order('start_date desc').first
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

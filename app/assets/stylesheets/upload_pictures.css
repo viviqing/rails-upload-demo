@@ -133,3 +133,33 @@ table, th, td {
   max-width: 469px;
   max-height: 200px;
 }
+
+.upload-pic .upload-message {
+	position:absolute;
+	bottom:10px;
+	width:917px;
+	padding: 5px 10px;
+	background:rgba(0, 0, 0, 0.5) !important;
+	background:#000;
+	display:none;
+}
+.upload-pic:hover .upload-message {
+	display:block;
+}
+.upload-pic .upload-message span {
+    color:#FFF;
+    height:18px;
+    line-height:18px;
+    display:block;
+    float: left;
+    width: 700px;
+}
+
+.upload-pic .upload-message span a {
+	color:#FFF;
+	text-decoration:underline;
+}
+.upload-pic .upload-message span a:hover {
+	color:#FFF;
+	text-decoration:none;
+}

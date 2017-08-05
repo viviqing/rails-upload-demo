@@ -13,17 +13,16 @@
   end %>
   <div class="container">
     <div class="upload-pic min-height">
-      <div class="upload-title"><span></span>Picture Preview</div>
+      <div class="upload-title">Picture Preview</div>
       <div class="message-span"><span><%=raw error_message.blank? ? message : error_message %></span></div>
     </div>
 		<div class="upload-files">
-			File&nbsp;&nbsp;<%= f.file_field :image, :size => 35 %>
-			<br />
+			File: <%= f.file_field :image %>
 			Start Date: <%= f.text_field :start_date, :readonly => 'readonly' %>&nbsp;&nbsp;
 			Description: <%= f.text_field :description %>
-			<span style='float: right;'>
+			<span style='float: right; padding: 10px;'>
 			  <%= f.submit 'Upload' %> |
-			  <%= link_to 'Back', upload_pictures_path %>
+			  <%= link_to 'Back', root_url %>
 			<span>
     </div>
   </div>
